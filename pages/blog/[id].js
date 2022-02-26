@@ -11,12 +11,14 @@ export default function BlogId({ blog }) {
             __html: `${blog.body}`,
         }}
         />
+        <>
         <Image
         src={blog.image_01.url}
         alt="pic"
         width={blog.image_01.height}
         height={blog.image_01.width}
       />
+      </>
     </main>
   );
 }
