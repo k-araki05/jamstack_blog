@@ -1,4 +1,5 @@
 import { client } from "../../libs/client";
+import Image from 'next/image'
 import styles from '../../styles/Home.module.scss';
 
 export default function BlogId({ blog }) {
@@ -10,7 +11,14 @@ export default function BlogId({ blog }) {
             __html: `${blog.body}`,
         }}
         />
-        <p>{blog.publishedAt}</p>
+        <>
+        <Image
+        src={blog.image_01.url}
+        alt="pic"
+        width={blog.image_01.height}
+        height={blog.image_01.width}
+      />
+      </>
     </main>
   );
 }

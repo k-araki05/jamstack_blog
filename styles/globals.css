@@ -15,7 +15,16 @@ a {
   box-sizing: border-box;
 }
 
-.post_date {
+body {
+  margin: 2em;
+}
+
+li.blog_id {
+  margin-bottom: 20px;
+}
+
+span.post_date {
   font-size: 10px;
   color: gray;
+  line-height: 2px;
 }
