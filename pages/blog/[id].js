@@ -21,21 +21,6 @@ export default function BlogId({ blog }) {
   );
 }
 
-
-
-function Home() {
-  return (
-    <>
-      <Image
-        src="https://example.com/test"
-        alt="Landscape picture"
-        width={500}
-        height={500}
-      />
-    </>
-  )
-}
-
 // 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "blog" });
