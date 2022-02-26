@@ -10,7 +10,7 @@ export default function BlogId({ blog }) {
             __html: `${blog.body}`,
         }}
         />
-        <p>{blog.publishedAt}</p>
+        <img src={blog.image_01.url} width={blog.image_01.height} height={blog.image_01.width}></img>
     </main>
   );
 }

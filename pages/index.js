@@ -5,14 +5,14 @@ import { client } from "../libs/client";
 export default function Home({ blog }) {
   return (
     <div>
-      <h1>タイトル</h1>
+      <h1>俺のブログ</h1>
       <ul>
         {blog.map((blog) => (
-          <li key={blog.id}>
+          <li className="blog_id" key={blog.id}>
             <Link href={`/blog/${blog.id}`}>
               <a>{blog.title}</a>
             </Link>
-            <p className="post_date">投稿日：{blog.post_date.substr( 0, 10 )}</p>
+            <span className="post_date"><p>投稿日：{blog.publishedAt.substr( 0, 10 )}</p></span>
           </li>
         ))}
       </ul>
