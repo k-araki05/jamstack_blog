@@ -1,4 +1,5 @@
 import { client } from "../../libs/client";
+import Image from 'next/image'
 import styles from '../../styles/Home.module.scss';
 
 export default function BlogId({ blog }) {
@@ -10,9 +11,29 @@ export default function BlogId({ blog }) {
             __html: `${blog.body}`,
         }}
         />
-        <Image src={blog.image_01.url} width={blog.image_01.height} height={blog.image_01.width}></Image>
+        <Image
+        src={blog.image_01.url}
+        alt="pic"
+        width={blog.image_01.height}
+        height={blog.image_01.width}
+      />
     </main>
   );
+}
+
+
+
+function Home() {
+  return (
+    <>
+      <Image
+        src="https://example.com/test"
+        alt="Landscape picture"
+        width={500}
+        height={500}
+      />
+    </>
+  )
 }
 
 // 静的生成のためのパスを指定します
