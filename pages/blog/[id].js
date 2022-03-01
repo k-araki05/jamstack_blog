@@ -11,14 +11,14 @@ export default function BlogId({ blog }) {
             __html: `${blog.body}`,
         }}
         />
-        <>
-        <Image
-        src="https://images.microcms-assets.io/assets/34340c486c204f439c1cb3bfb2b17901/e938979160744b4d831d82000ed291da/honda.JPG"
-        alt="pic"
-        width={blog.image_01.height}
-        height={blog.image_01.width}
-      />
-      </>
+        {blog.image_01 && 
+            <Image
+            src={blog.image_01.url}
+            alt="pic"
+            width={blog.image_01.height}
+            height={blog.image_01.width}
+            />
+        }
     </main>
   );
 }
